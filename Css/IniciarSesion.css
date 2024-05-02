@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 99vh;
+    border: 1px solid;
+}
+header{
+    height: 12%;
+    background-color: rgb(160, 212, 255);
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 10%;
+    height: 80%;
+    margin-left: 2%;
+    background-image: url(../Img/logo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.barra{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2%;
+    height: 80%;
+    text-decoration:none ;
+}
+
+
+
+.barra>a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 2s;
+}
+
+.barra>a:Hover{
+
+    transform: scale(1.1);
+    transition: 2s;
+
+}
+
+main{
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+form {
+    top: 25%;
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    background-position: center; /* Centra la imagen */
+    max-width: none;
+    position: absolute;
+    margin-left: 39%;
+}
+
+form h2 {
+    color: rgb(13, 14, 14);
+    font-size: 25px;
+}
+
+.form-txt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-txt a {
+    color: rgb(16, 16, 17);
+    text-decoration: none;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.form-txt a:hover {
+    color: rgb(233, 100, 209);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#bot{
+    display: flex;
+    justify-content: space-between;
+}
+
+#regi{
+    width: 45%;
+}
+
+input , textarea {
+    background-color: azure;
+    padding: 20px 14px;
+    margin-bottom: 25px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 15px; 
+    color: rgb(18, 19, 19);
+}
+
+::placeholder {
+    color: rgb(8, 8, 8);
+    font-size: 15px;
+}
+
+:focus {
+    outline: 1px solid #40bedd;
+}
+
+.btn {
+    background-color: rgb(122, 190, 219);
+    color: rgb(231, 237, 241);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(94, 174, 248);
+}
+@media(max-width:991px) {
+    body { 
+        padding: 30px;
+    }
+    form {
+        width: 100%;
+    }
+    
+
+}

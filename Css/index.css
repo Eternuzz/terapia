@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 99vh;
+}
+header{
+    height: 12%;
+    background-color: rgb(160, 212, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 10%;
+    height: 80%;
+    margin-left: 2%;
+    background-image: url(../Img/logo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.barra{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2%;
+    height: 80%;
+    text-decoration:none ;
+}
+
+
+
+.barra>a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 2s;
+}
+
+.barra>a:Hover{
+
+    transform: scale(1.1);
+    transition: 2s;
+
+}
+
+main{
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.fondo{
+    height: 100%;
+    flex: none;
+    background-image: url(../Img/Inicio.png);
+    background-position: center;
+    background-size: calc(100%) calc(100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.informacion_inicio{
+    margin-top: 5%;
+    width: 50%;
+    height: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+.separar{
+    height: 12%;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(210, 225, 249);
+}
+
+
+/*Seccion Como Funcionamos*/
+
+.info_servicio{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    height: 100%;
+
+}
+
+.contain_info_servicio{
+
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.foto{
+
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto>img{
+    width: 80%;
+    height: 90%;
+    border-radius: 10px 200px 10px 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contain_info_service{
+
+    width: 58%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.contain_info_service>h3{
+    margin-top: 5%;
+    height: 10%;
+    font-size: 140%;
+
+}
+.espacio{
+    height: 20%;
+    display: flex;
+    align-items: center;
+
+}
+
+.bet{
+    justify-content: space-between;
+}
+
+.boton{
+    margin-top: 5%;
+    background-color: rgb(67, 67, 226);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 2s;
+    width: 40%;
+}
+
+.boton>a{
+    text-decoration: none;
+    color: azure;
+}
+.boton:hover{
+    transform: scale(1.1);
+    transition: 2s;
+}
+
+.box{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 130%;
+    background-color: rgb(189, 189, 189);
+}
+.contains_services{
+
+    display: flex;
+    height: 10%;
+    font-size: 120%;
+}
+
+.contains_services>span{
+
+    margin-right: 2%;
+    color: rgb(68, 155, 126);
+}
+
+/*Informacion Terapias*/
+
+.informacion{
+    margin-top: 2%;
+    height: 100%;
+    display: flex;
+    flex: none;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+.informacion>h2{
+
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contain_ejer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    flex: none;
+    width: 100%;
+}
+
+.ejercicio_card{
+    cursor: pointer;
+    width: 28%;
+    height: 90%;
+    transition: 2s;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.ejercicio_card>img{
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ejercicio_card:hover{
+
+    transform: scale(1.1);
+
+}

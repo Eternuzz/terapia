@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 99vh;
+}
+header{
+    height: 12%;
+    background-color: rgb(160, 212, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 10%;
+    height: 80%;
+    margin-left: 2%;
+    background-image: url(../Img/logo.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.barra{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 2%;
+    height: 80%;
+    text-decoration:none ;
+}
+
+.barra>a{
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: azure;
+    text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 2s;
+}
+
+.barra>a:Hover{
+
+    transform: scale(1.1);
+    transition: 2s;
+
+}
+
+main{
+    height: 88%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titulo{
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    flex: none;
+}
+/*SLIDER*/
+
+.slider_container{
+    height: 80%; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+}
+
+.slider{
+    height: 70%;
+    width: 40%;
+    display: flex;
+    transition: transform 2s ease; /* Transición suave */
+    background-image: url(../Img/balon.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex: none;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+
+/**/
+
+.breve_des{
+    height: 12%;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(210, 225, 249);
+}
+
+.text_des{
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    font-size: 110%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+/**/
+.como_funciona{
+    height: 100%;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contain_como{
+    width: 80%;
+    height: 90%;
+    background-color: rgb(210, 225, 249);
+    border-radius: 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contain_info{
+    width: 80%;
+    display: flex;
+}
+
+.cont_1{
+    flex-direction: column;
+    text-align: center;
+    font-size: 120%;
+    height: 10%;
+}
+
+.cont_2{
+    height: 70%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.cont_3{
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+
+}
+.cont_3>button{
+    font-size: 120%;
+    height: 100%;
+    width: 30%;
+    background-color: rgb(19, 86, 209);
+    border-radius: 30px;
+    transition: 2s;
+}
+
+.cont_3>button:hover{
+    transform: scale(1.1);
+    transition: 2s;
+}
+
+.contain_extra{
+    font-size: 110%;
+    height: 80%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: space-around;
+    text-align: center;
+
+}
+
+.logito{
+    height: 50%;
+    width: 80%;
+    border-radius: 50%;
+}
+.log_1{
+    background-image: url(../Img/calendar.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.log_2{
+    background-image: url(../Img/videocall.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.log_3{
+    background-image: url(../Img/match.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+/*mision _ compromiso*/
+
+
+.mision_compromiso{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: none;
+}
+
+
+.contain_mc{
+    height: 90%;
+    width: 40%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.text_mc{
+    font-size: 110%;
+    width: 80%;
+    text-align: center;
+    height: 40%;
+}
+
+.imagen_mc{
+    width: 80%;
+    height: 50%;
+}
+.imagen_mc>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+}
+
+.valores{
+
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none; 
+    flex-direction: column;
+
+}
+.contain_info_valores{
+    border-radius: 20px;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+}
+
+.valores>h2{
+    height: 10%;
+    text-align: center;
+}
+
+.text_valores{
+    font-size: 120%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    width: 80%;
+}
