@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <link rel="stylesheet" href="../Css/Registro.css
+    ">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+
+        </div>
+        <div class="barra">
+            <a href="../index.html">Inicio</a>
+            <a href="Nosotros.html">Quienes Somos</a>
+            <a href="IniciarSesion.html">Iniciar Sesion</a>
+            <a href="">Registrate</a>
+        </div>
+    </header>
+
+    <main>
+
+        <form action="../Php/ProcesarRegistro.php" method="post" class="for">
+
+            <div class="titulo">
+                <h2>REGISTRO</h2>
+            </div>
+
+
+            <div class="contain_datos">
+
+                <div class="colum1">
+                    <input type="text" name="name" placeholder="Nombre" required>
+    
+                    <input type="text" name="apellido" placeholder="Apellidos" required>
+        
+                    <input type="number" name="edad" placeholder="Edad"required>
+        
+                    <select name="genero" >
+                        <option value="Femenino">Femenino</option>
+                        <option value="Masculino">Masculino</option>
+                    </select>
+
+                    <input type="email" name="email" placeholder="Correo"required>
+
+                </div>
+
+                <div class="colum1">
+                    
+                    <input type="number" name="Identificacion" placeholder="Identificacion" required>
+    
+                    <input type="number" name="telefono" placeholder="Telefono" required>
+
+                    <input type="date" name="fecha" placeholder="Fecha de Nacimiento" required>
+        
+
+                    <select name="rol" >
+                        <option value="3">Paciente</option>
+                        <option value="2">Especialista</option>
+                    </select>
+
+                    <input type="password" name="pass" placeholder="Contraseña"required>
+        
+                    
+                </div>
+
+            </div>
+            <div class="enviar">
+                <button type="submit">Resgitrarse</button>
+            </div>
+
+        </form>
+
+        <!-- <form autocomplete="off">
+
+            <h2>REGISTRO</h2>
+    
+            <div class="input-group">
+    
+                <input type="text" name="name" placeholder="Nombre completo" required>
+    
+                <input type="email" name="email" placeholder="Email" required>
+    
+                <input type="password" name="password" placeholder="Contraseña"required>
+    
+                <input type="date" name="birthdate" placeholder="Fecha de Nacimiento"required>
+    
+    
+                <div id="bot">
+                    <input class="btn" type="submit" value="Registrarse" id="regi">
+                    <input class="btn" type="submit" value="volver" id="regi">
+                </div>
+            </div>
+    
+        </form> -->
+    
+    </main>
+
+
+
+</body>
+
+</html>

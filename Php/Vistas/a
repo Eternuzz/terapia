@@ -1,0 +1,108 @@
+                        <h2>Ejercicios para la espalda</h2>
+
+
+                        <div class="ejercicios">
+                            <img src="img/imagen1" alt="imagen1">
+                            <div class="info">
+                                <h3>Estiramiento de rodilla al pecho</h3>
+                                <p>Acuéstate boca arriba con las rodillas dobladas (A).
+                                    Tira de una rodilla hacia el pecho con ambas manos (B).
+                                    Mantén durante cinco segundos, luego cambia de pierna (C).
+                                    Repite con ambas piernas al mismo tiempo (D).
+                                    Haz cada estiramiento 2-3 veces.
+                                    Realiza la serie de ejercicios una vez por la mañana y por la noche, si es posible.</p>
+
+                            </div>
+                        </div>
+
+
+                        <div class="ejercicios">
+                            <img src="img/imagen2" alt="imagen2">
+                            <div class="info">
+                                <h3>Estiramiento giratorio de la región lumbar</h3>
+                                <p>Acuéstate boca arriba con las rodillas dobladas y los pies en el suelo (A).
+                                    Mantén los hombros en el suelo y gira lentamente las rodillas hacia un lado (B).
+                                    Mantén esa posición de 5 a 10 segundos y luego regresa a la posición inicial (C).
+                                    Repite el ejercicio hacia el lado opuesto (D).
+                                    Realiza cada estiramiento 2-3 veces.
+                                    Haz la serie de ejercicios una vez por la mañana y una vez por la noche, si es posible.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="ejercicios">
+                            <img src="img/imagen3" alt="imagen3">
+                            <div class="info">
+                                <h3>Ejercicios de flexibilidad para la región lumbar</h3>
+                                <p>Acuéstate boca arriba con las rodillas dobladas y los pies en el suelo.
+                                    Levanta la parte baja de la espalda contrayendo los abdominales.
+                                    Mantén la posición durante cinco segundos y luego relaja.
+                                    Luego, empuja el ombligo hacia el suelo.
+                                    Mantén la posición durante cinco segundos y relaja.
+                                    Repite el proceso.
+                                    Comienza con cinco repeticiones al día y aumenta gradualmente.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="ejercicios">
+                            <img src="img/imagen4" alt="imagen4">
+                            <div class="info">
+                                <h3>Ejercicio de puente</h3>
+                                <p>Acuéstate boca arriba con rodillas dobladas y pies en el suelo.
+                                    Mantén hombros y cabeza relajados.
+                                    Aprieta abdomen y glúteos.
+                                    Eleva caderas formando una línea recta con rodillas y hombros.
+                                    Mantén la posición durante tres respiraciones profundas.
+                                    Vuelve a la posición inicial y repite.
+                                    Comienza con cinco repeticiones al día y aumenta gradualmente hasta 30.
+
+
+
+                                    </p>
+                            </div>
+                        </div>
+
+
+                        <div class="ejercicios">
+                            <img src="img/imagen5" alt="imagen5">
+                            <div class="info">
+                                <h3>Estiramiento de gato</h3>
+                                <p>Arrodíllate sobre las rodillas y las manos (A).
+                                    Arquea lentamente la espalda, elevando la barriga hacia el techo y dirigiendo la cabeza hacia abajo (B).
+                                    Deja caer lentamente la espalda y el abdomen hacia el suelo mientras levantas la cabeza (C).
+                                    Vuelve a la posición inicial (A).
+                                    Repite este estiramiento de tres a cinco veces, dos veces al día.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="ejercicios">
+                            <img src="img/imagen6" alt="imagen6">
+                            <div class="info">
+                                <h3>Estiramiento giratorio sentado de la región lumbar</h3>
+                                <p>siéntate en una silla o taburete sin apoyabrazos.
+                                    Cruza la pierna derecha sobre la izquierda.
+                                    Presiona el codo izquierdo contra la rodilla derecha y gira hacia el costado (A).
+                                    Mantén la posición durante 10 segundos.
+                                    Repite en el lado opuesto (B).
+                                    Realiza este estiramiento entre tres y cinco veces en cada lado, dos veces al día.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="ejercicios">
+                            <img src="img/imagen7.webp" alt="imagen7">
+                            <div class="info">
+                                <h3>
+                                
+                                </h3>
+                                <p>
+                                
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="seguimiento">
+                            <button>Iniciar Seguimiento Terapia</button>
+                        </div>
