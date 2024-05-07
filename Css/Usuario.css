@@ -227,14 +227,13 @@ main{
 
 
 
-/**/
+/*seguimiento terapia*/
 
 .cont_general{
     display: flex;
     width: 100%;
     height: 100%;
     flex: none;
-    border: 1px solid;
 }
 
 .title_general{
@@ -313,7 +312,6 @@ main{
     height: 68%;
     width: 90%;
     flex: none;
-    border: 1px solid;
     overflow: auto;
 }
 
@@ -338,4 +336,146 @@ main{
     background-image: url(../Img/doctor.png);
     background-size: cover;
 
+}
+
+
+
+
+/*RECORDATORIOS*/
+.Recordatorio{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: none;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.contain_recordatorios{
+
+    width: 76%;
+    height: 98%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.contain_r{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor_crear{
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.img_crear{
+    width: 30%;
+    height: 30%;
+    border-radius: 10px;
+    background-image: url();
+    background-size: calc(100%)calc(100%);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.texto_crear{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 12%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.tipo_terapia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 12%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.fecha_hora{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    height: 12%;
+    border-radius: 5px;
+}
+
+.fecha_hora>input{
+    width: 40%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+#crear_recordatorio{
+    width: 20%;
+    height: 8%;
+    border:none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+/**/
+
+
+.bandeja_recordatorios{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 75%;
+    border-radius: 5px;
+    overflow: auto;
+
+}
+.bandeja{
+    width: 98%;
+    height: 8%;
+    flex: none;
+    margin-bottom: 1%;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+
+
+/*MENSAJES*/
+
+.Configuracion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.contain_mensajes{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+    overflow: auto;
 }

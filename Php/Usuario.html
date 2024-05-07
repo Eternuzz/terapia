@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="D:\Xampp\htdocs\Stiven\Terapia\Css/Usuario.css">
+    <link rel="stylesheet" href="../Css/Usuario.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -372,6 +372,9 @@
     
             </section>
     
+            <!-- seguimiento terapia -->
+
+
             <section class="Seguimiento_terapia cont_general" id="Seguimiento_terapia">
                 <div class="title_general">
                     <h1>seguimiento terapia</h1>
@@ -382,6 +385,8 @@
                 </div>
 
             </section>
+
+            <!-- Comunicacion terapia -->
     
             <section class="Comunicacion cont_general" id="Comunicacion">
                 <div class="title_general">
@@ -418,12 +423,97 @@
                 </div>
     
             </section>
+
+            <!-- Recordatorio -->
     
             <section class="Recordatorio cont_general" id="Recordatorio">
+                <div class="barra_lateral">
+                    <button onclick="cambiar_c('crear_r')">Crear Recordatorio</button>
+                    <button onclick="cambiar_c('mis_r')">Mis Recordatorios</button>
+      
+    
+                </div>
+
+                <div class="contain_recordatorios">
+                    <div class="contain_r" id="crear_r">
+                        <div class="title_general">
+                            <h1>Crea Tu Recordatorio!</h1>
+                        </div>
+
+                        <form class="contenedor_crear">
+                            <div class="img_crear">
+
+                            </div>
+                            <div class="texto_crear">
+
+                            </div>
+                            <div class="tipo_terapia">
+
+                            </div>
+                            <div class="fecha_hora">
+
+                                <input type="date" name="fecha">
+
+                                <input type="time" name="hora" >
+
+                            </div>
+
+                            <button id="crear_recordatorio">Crear</button>
+
+                        </form>
+
+                    </div>
+
+                    <div class="contain_r" id="mis_r">
+
+                        <div class="title_general">
+                            <h1>MIs Recordatorios</h1>
+                        </div>
+
+                        <form class="consulta">
+                            <select name="id_especialidad" id="" class="select_especialidad">
+                                <option value="">prueba</option>
+                            </select>
+        
+                            <button class="consultar_especialistas" id="buscare">Buscar</button>
+                        </form>
+
+                        <div class="bandeja_recordatorios">
+                            <div class="bandeja">
+                                <p>Tipo_Cita</p>
+                                <p>Fecha</p>
+                                <p>Hora</p>
+                                
+                                <button>Eliminar</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
     
             </section>
+
+
+            <!-- Configuracion -->
     
             <section class="Configuracion cont_general" id="Configuracion">
+                <div class="title_general">
+                    <h1>Mensajes!</h1>
+                </div>
+
+                <div class="contain_mensajes" id="bandeja_mensajes">
+                    <div class="bandeja">
+                        <p>Tipo_Cita</p>
+                        <p>Fecha</p>
+                        <p>Hora</p>
+                        <button>ver</button>
+                        <button>Eliminar</button>
+                    </div>
+
+                </div>
     
             </section>
 
@@ -456,7 +546,7 @@ function con_especialista() {
 </script>
 <script src="Js/desliza.js"></script>
 <script src="Js/Dirigir.js"></script>
-<script src="D:\Xampp\htdocs\Stiven\Terapia\Js/Cambiar_Contenedor.js"></script>
+<script src="../Js/Cambiar_Contenedor.js"></script>
 
 
 </html>
