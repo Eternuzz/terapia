@@ -4,6 +4,7 @@
 }
 body{
     height: 99vh;
+    flex:none;
 }
 header{
     height: 12%;
@@ -11,6 +12,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex:none;
 }
 
 .contain_header{
@@ -20,6 +22,7 @@ header{
     justify-content: space-between;
     align-items: center;
     border: 1px solid;
+    flex:none;
 }
 .logo{
     width: 10%;
@@ -63,6 +66,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: none;
 }
 
 .contain_nav{
@@ -91,6 +95,7 @@ nav{
 
 main{
     height: 78%;
+    flex:none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,6 +106,7 @@ main{
     width: 85%;
     height: 99%;
     display: flex;
+    flex:none;
     flex-direction: column;
     overflow: hidden;
 
@@ -124,6 +130,7 @@ main{
     box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;    border-radius: 10px;
     align-items: center;
     justify-content: space-around;
+    flex:none;
 
 }
 
@@ -149,6 +156,7 @@ main{
 
 .contenido_terapias{
     width: 76%;
+    flex:none;
     height: 98%;
     display: flex;
     flex-direction: column;
@@ -166,6 +174,7 @@ main{
     overflow: auto;
     align-items: center;
     justify-content: space-around;
+    flex:none;
 }
 
 .ejercicios{
@@ -250,6 +259,7 @@ main{
 .Seguimiento_terapia{
     flex-direction: column;
     align-items: center;
+    flex:none;
 }
 
 
@@ -265,6 +275,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    flex:none;
 }
 .mensaje_llamativo {
     height: 10%;
@@ -469,6 +480,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex:none;
     justify-content: space-around;
 }
 .contain_mensajes{
@@ -479,3 +491,46 @@ main{
     border-radius: 5px;
     overflow: auto;
 }
+
+
+
+.modal_alerta{
+    display: none;
+    z-index: 10;
+    width: 0%;
+    height: 10%;
+    border-radius: 10px 0 0 10px;
+    position: fixed;
+    top: 0;
+    right:  0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    animation-name: example;
+    animation-duration: 3s;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.icono_modal{
+    background-image: url(../Img/checked.png);
+    border-radius: 50%;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    flex: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+}
+
+
+  
+  @keyframes example {
+    50%  {    width: 15%;}
+    100% {     width: 0%;
+        top: 0;
+        right:  0;
+    
+}
+  }
