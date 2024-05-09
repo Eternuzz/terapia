@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesion</title>
     <link rel="stylesheet" href="../Css/IniciarSesion.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -23,7 +25,7 @@
 
     <main>
 
-        <form autocomplete="off">
+        <form autocomplete="on" id="iniciarS" action="../Php/ProcesarInicioSesion.php" method="post">
             <div class="title">
 
                 <h2>Iniciar Sesión</h2>
@@ -35,15 +37,27 @@
     
                 <input type="password" name="password" placeholder="Contraseña" required>
     
-                <input class="enviar" type="submit" value="Iniciar Sesión" id="login">
+                <input class="enviar" type="button" value="Iniciar Sesión" id="login" onclick="evento_click('../Php/ProcesarInicioSesion.php','#iniciarS','login','1','../Php/Usuario.php')">
             </div>
     
         </form>
 
     </main>
+    <!-- onclick="evento_click('../Php/ProcesarInicioSesion.php','#iniciarS','login','1','../Php/Usuario.html')" -->
 
 
 
 </body>
+
+<div class="modal_alerta">
+    <div class="icono_modal">
+        
+    </div>
+    <p class="text_modal">Exito!</p>
+    
+</div>
+
+<script src="../Js/AlertaBien.js"></script>
+<script src="../Js/Ajax.js"></script>
 
 </html>

@@ -1,3 +1,15 @@
+<?php
+include('Conexion.php');
+session_start();
+
+if($_SESSION["id"]!=null){
+
+}else{
+    echo "<script>window.location.href = '../Vistas/IniciarSesion.html'</script>";
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +32,11 @@
 
             </div>
             <div class="barra">
-    
+            <?php  
+                        
+                        echo $_SESSION["nombre"];
+                        
+                        ?>
             </div>
 
         </div>
@@ -899,17 +915,35 @@
                     <p>¡Estamos aquí para cuidarte y ayudarte en tu proceso de recuperación! No dudes en contactarnos para cualquier pregunta o consulta.</p>
                 </div>
 
-                <form class="consulta">
-                    <select name="id_especialidad" id="" class="select_especialidad">
-                        <option value="">prueba</option>
+                <form class="consulta" id="comuni_espe">
+                    <select name="id_especialidad"  class="select_especialidad">
+                        
+                        <?php  
+                        
+                        $sql = "SELECT * FROM especialidad ";
+                        $resultado = mysqli_query($con, $sql);
+                    
+                        if (mysqli_num_rows($resultado) > 0) {
+                            while ($fila = $resultado->fetch_assoc()) {
+                                ?>
+
+                                    <option value="<?php echo $fila["idespecialidad"];?>"><?php   echo  $fila["Nombre_especialidad"];  ?></option>
+
+                                                            
+                                <?php
+                            }
+                        }
+                    ?>
+
+                        
                     </select>
 
-                    <button class="consultar_especialistas" id="buscare">Buscar</button>
+                    <button type="button" class="consultar_especialistas" id="buscare" onclick="evento_normal('BuscarEspecialista.php','#comuni_espe','buscare','contain_especialistas_id')">Buscar</button>
                 </form>
 
-                <div class="contain_especialistas">
+                <div class="contain_especialistas" id=contain_especialistas_id>
 
-                    <div class="especialista">
+                    <!-- <div class="especialista">
 
                         <div class="img_especialista">
 
@@ -920,18 +954,19 @@
                         <p>Especialidad</p>
 
                         <button class="enviar_mensaje"> Enviar Mensaje </button>
-                    </div>
+                    </div> -->
 
                 </div>
     
             </section>
 
             <!-- Recordatorio -->
-    
+                    
+            <form action="" style="display:none" id="nul"></form>
             <section class="Recordatorio cont_general" id="Recordatorio">
                 <div class="barra_lateral">
                     <button onclick="cambiar_c('crear_r')">Crear Recordatorio</button>
-                    <button onclick="cambiar_c('mis_r')">Mis Recordatorios</button>
+                    <button id="record" onclick="cambiar_c('mis_r'),evento_normal('BuscarRecordatorio.php','#nul','record','bandeja_recordatorio')" >Mis Recordatorios</button>
       
     
                 </div>
@@ -942,14 +977,37 @@
                             <h1>Crea Tu Recordatorio!</h1>
                         </div>
 
-                        <form class="contenedor_crear">
+                        <form class="contenedor_crear" action="CrearRecordatorio.php" method="post" id="crear_re" >
                             <div class="img_crear">
 
                             </div>
                             <div class="texto_crear">
 
+                                <input type="text" class="observacion" name="mensaje">
+
                             </div>
                             <div class="tipo_terapia">
+                            <select name="id_terapia"  class="select_especialidad">
+                        
+                                    <?php  
+                                    
+                                    $sql = "SELECT * FROM terapias ";
+                                    $resultado = mysqli_query($con, $sql);
+                                
+                                    if (mysqli_num_rows($resultado) > 0) {
+                                        while ($fila = $resultado->fetch_assoc()) {
+                                            ?>
+
+                                                <option value="<?php echo $fila["idterapias"];?>"><?php   echo  $fila["Nombre_Terapia"];  ?></option>
+
+                                                                        
+                                            <?php
+                                        }
+                                    }
+                                ?>
+
+                                    
+                                </select>
 
                             </div>
                             <div class="fecha_hora">
@@ -959,8 +1017,8 @@
                                 <input type="time" name="hora" >
 
                             </div>
-
-                            <button id="crear_recordatorio">Crear</button>
+                            <!-- onclick="evento_click_('CrearRecordatorio.php','#crear_re','boton_recordatorio')" -->
+                            <button type="button" id="boton_recordatorio" onclick="evento_click_('CrearRecordatorio.php','#crear_re','boton_recordatorio')">Crear</button>
 
                         </form>
 
@@ -972,15 +1030,33 @@
                             <h1>MIs Recordatorios</h1>
                         </div>
 
-                        <form class="consulta">
-                            <select name="id_especialidad" id="" class="select_especialidad">
-                                <option value="">prueba</option>
-                            </select>
+                        <form class="consulta" id="buscar_recordd">
+                            <select name="id_terapia2"  class="select_especialidad">
+                            
+                            <?php  
+                            
+                            $sql = "SELECT * FROM terapias ";
+                            $resultado = mysqli_query($con, $sql);
+                        
+                            if (mysqli_num_rows($resultado) > 0) {
+                                while ($fila = $resultado->fetch_assoc()) {
+                                    ?>
+
+                                        <option value="<?php echo $fila["idterapias"];?>"><?php   echo  $fila["Nombre_Terapia"];  ?></option>
+
+                                                                
+                                    <?php
+                                }
+                            }
+                        ?>
+
+                            
+                        </select>
         
-                            <button class="consultar_especialistas" id="buscare">Buscar</button>
+                            <button class="consultar_especialistas" id="buscarRecord" type="button" onclick="evento_normal('BuscarRSolo.php','#buscar_recordd','buscarRecord','bandeja_recordatorio')">Buscar</button>
                         </form>
 
-                        <div class="bandeja_recordatorios">
+                        <div class="bandeja_recordatorios" id="bandeja_recordatorio">
                             <div class="bandeja">
                                 <p>Tipo_Cita</p>
                                 <p>Fecha</p>
@@ -1038,26 +1114,26 @@
 <script>
 
 
-function con_especialista() {
-            $.ajax({
-                url: "./Consultar_especialistas.php",
-                type: "POST",
-                data: $("#form_validar_mody").serialize(),
-                success: function (respo) {
-                    alert(respo);
-                }
-            }); formmody.reset();
-        }
-        $("#validacionmody").click(function () {
+// function con_especialista() {
+//             $.ajax({
+//                 url: "BuscarEspecialista.php",
+//                 type: "POST",
+//                 data: $("#comuni_espe").serialize(),
+//                 success: function (respo) {
+//                     alert(respo);
+//                 }
+//             });
+//         }
+//         $("#contain_especialistas_id").click(function () {
 
-            con_especialista();
-        });
+//             con_especialista();
+//         });
 
-</script>
-<script src="Js/desliza.js"></script>
-<script src="Js/Dirigir.js"></script>
+// </script>
+
 <script src="../Js/Cambiar_Contenedor.js"></script>
 <script src="../Js/AlertaBien.js"></script>
+<script src="../Js/Ajax.js"></script>
 
 
 </html>

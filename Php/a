@@ -106,3 +106,13 @@
                         <div class="seguimiento">
                             <button>Iniciar Seguimiento Terapia</button>
                         </div>
+
+
+
+                        <?php  
+                        
+                        echo
+                        
+                        ?>
+
+                           <?php   echo    ?>
