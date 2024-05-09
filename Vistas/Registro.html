@@ -7,8 +7,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse</title>
-    <link rel="stylesheet" href="../Css/Registro.css
-    ">
+    <link rel="stylesheet" href="../Css/r1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 
@@ -73,10 +74,10 @@
 
             </div>
             <div class="enviar">
-                <button type="submit">Resgitrarse</button>
+                <button type="button" id="registroo" onclick="evento_click('../Php/ProcesarRegistro.php','.for','registroo','1')">Resgitrarse</button>
             </div>
 
-        </form>
+        </form> 
 
         <!-- <form autocomplete="off">
 
@@ -106,5 +107,42 @@
 
 
 </body>
+
+<div class="modal_alerta">
+    <div class="icono_modal">
+        
+    </div>
+    <p class="text_modal">Exito!</p>
+    
+</div>
+
+<script src="../Js/AlertaBien.js"></script>
+<script src="../Js/Ajax.js"></script>
+<script>
+
+// function enviarvalidacion() {
+//             $.ajax({
+//                 url: "../Php/ProcesarRegistro.php",
+//                 type: "POST",
+//                 data: $(".for").serialize(),
+//                 success: function (respo) {
+//                     if(respo=="Si"){
+//                         Good('Si');
+//                     }
+//                     else{
+//                         Good('No');
+//                     }
+                    
+//                 }
+//             });
+//         }
+
+//         $("#registroo").click(function () {
+
+//             enviarvalidacion();
+//         });
+// </script>
+
+
 
 </html>
