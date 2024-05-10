@@ -983,7 +983,7 @@ if($_SESSION["id"]!=null){
                             </div>
                             <div class="texto_crear">
 
-                                <input type="text" class="observacion" name="mensaje">
+                                <input type="text" class="observacion" name="mensaje" placeholder="Mensaje">
 
                             </div>
                             <div class="tipo_terapia">
@@ -1115,6 +1115,23 @@ if($_SESSION["id"]!=null){
 </div>
 
 
+<div class="modal_mensaje">
+
+    <h2>Enviar Mensake</h2>
+
+    <form id="c_enviar_mensaje">
+
+        
+        
+        <textarea name="mensaje" id=""></textarea>
+
+        <button> Enviar Mensaje</button>
+    </form>
+
+    
+</div>
+
+
 
 <script>
 
@@ -1142,6 +1159,8 @@ function test() {
 <script src="../Js/Cambiar_Contenedor.js"></script>
 <script src="../Js/AlertaBien.js"></script>
 <script src="../Js/Ajax.js"></script>
+<script src="../Js/eliminar_recordatorio.js"></script>
+
 
 
 </html>
