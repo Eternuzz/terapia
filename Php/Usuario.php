@@ -1091,7 +1091,9 @@ if($_SESSION["id"]!=null){
                         <button>Eliminar</button>
                     </div>
 
+
                 </div>
+
     
             </section>
 
@@ -1111,25 +1113,31 @@ if($_SESSION["id"]!=null){
     <p class="text_modal">Exito!</p>
     
 </div>
+
+
+
 <script>
 
 
-// function con_especialista() {
-//             $.ajax({
-//                 url: "BuscarEspecialista.php",
-//                 type: "POST",
-//                 data: $("#comuni_espe").serialize(),
-//                 success: function (respo) {
-//                     alert(respo);
-//                 }
-//             });
-//         }
-//         $("#contain_especialistas_id").click(function () {
+function test() {
+            $.ajax({
+                url: "recibir.php",
+                type: "POST",
+                data: $("#form_prueba").serialize(),
+                success: function (respuesta_server) {
+                    
+                }
+            });
+        }
 
-//             con_especialista();
-//         });
 
-// </script>
+
+        $("#id_prueba").click(function () {
+
+            test();
+        });
+
+ </script>
 
 <script src="../Js/Cambiar_Contenedor.js"></script>
 <script src="../Js/AlertaBien.js"></script>

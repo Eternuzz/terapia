@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <form class="modal_alerta" id="form_prueba" style="width:500px;height:500px;flex:none">
+
+        <input type="text" name="hola">
+        <button type="button" id="id_prueba"></button>
+        
+        </form>
+
+        <div id="contain" style="width:500px;height:500px;border:1px solid red">
+
+
+        </div>
+</body>
+<script>
+
+function test() {
+    $.ajax({
+        url: "recibir.php",
+        type: "POST",
+        data: $("#form_prueba").serialize(),
+        success: function (respuesta_server) {
+            $("#contain").html(respuesta_server);
+        }
+    });
+}
+
+
+
+$("#id_prueba").click(function () {
+    test();
+});
+
+</script>
+
+
+</script>
+</html>
