@@ -40,6 +40,7 @@ include ('Conexion.php');
         }
     }
 ?>
+<script src="../Js/enviar_mensaje.js"></script>
 
 
 

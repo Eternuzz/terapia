@@ -84,7 +84,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen1" alt="imagen1">
+                            <img src="../Img/imagen1" alt="imagen1">
                             <div class="info">
                                 <h3>Estiramiento de rodilla al pecho</h3>
                                 <p>Acuéstate boca arriba con las rodillas dobladas (A).
@@ -99,7 +99,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen2" alt="imagen2">
+                            <img src="../Img/imagen2" alt="imagen2">
                             <div class="info">
                                 <h3>Estiramiento giratorio de la región lumbar</h3>
                                 <p>Acuéstate boca arriba con las rodillas dobladas y los pies en el suelo (A).
@@ -113,7 +113,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen3" alt="imagen3">
+                            <img src="../Img/imagen3" alt="imagen3">
                             <div class="info">
                                 <h3>Ejercicios de flexibilidad para la región lumbar</h3>
                                 <p>Acuéstate boca arriba con las rodillas dobladas y los pies en el suelo.
@@ -128,7 +128,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen4" alt="imagen4">
+                            <img src="../Img/imagen4" alt="imagen4">
                             <div class="info">
                                 <h3>Ejercicio de puente</h3>
                                 <p>Acuéstate boca arriba con rodillas dobladas y pies en el suelo.
@@ -147,7 +147,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen5" alt="imagen5">
+                            <img src="../Img/imagen5" alt="imagen5">
                             <div class="info">
                                 <h3>Estiramiento de gato</h3>
                                 <p>Arrodíllate sobre las rodillas y las manos (A).
@@ -160,7 +160,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen6" alt="imagen6">
+                            <img src="../Img/imagen6" alt="imagen6">
                             <div class="info">
                                 <h3>Estiramiento giratorio sentado de la región lumbar</h3>
                                 <p>siéntate en una silla o taburete sin apoyabrazos.
@@ -174,7 +174,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>Ejercicio de retracción del omóplato</h3>
                                 <p>Siéntate en una silla sin apoyabrazos o en un taburete (A).
@@ -199,7 +199,7 @@ if($_SESSION["id"]!=null){
 
                         
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -213,7 +213,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -227,7 +227,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -241,7 +241,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -256,7 +256,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -271,7 +271,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -286,7 +286,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Ejercicios de equilibrio y estabilidad
@@ -301,7 +301,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -315,7 +315,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -329,7 +329,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -354,7 +354,7 @@ if($_SESSION["id"]!=null){
                         <h2>Rehabilitación ortopédica</h2>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Respiración Diafragmática
@@ -368,7 +368,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Espiraciones Forzadas
@@ -382,7 +382,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Ejercicios de Expansión Torácica
@@ -396,7 +396,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Ejercicios de Resistencia
@@ -447,7 +447,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Pasos para la Rehabilitación Cardiaca
@@ -518,7 +518,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 explicacion
@@ -547,7 +547,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Consejos Adicionales
@@ -655,7 +655,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                 
@@ -668,7 +668,7 @@ if($_SESSION["id"]!=null){
 
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                
                                 <p>
@@ -678,7 +678,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Consejos Adicionales
@@ -726,7 +726,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Caminata
@@ -786,7 +786,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                               
                                 <p>
@@ -796,7 +796,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                        
                                 <p>
@@ -806,7 +806,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 
                                 <p>
@@ -839,7 +839,7 @@ if($_SESSION["id"]!=null){
                         <h2>Rehabilitación Deportiva</h2>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Estiramiento de Pantorrillas
@@ -853,7 +853,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Elevaciones de Talón
@@ -867,7 +867,7 @@ if($_SESSION["id"]!=null){
                         </div>
 
                         <div class="ejercicios">
-                            <img src="img/imagen7.webp" alt="imagen7">
+                            <img src="../Img/imagen7.webp" alt="imagen7">
                             <div class="info">
                                 <h3>
                                     Flexiones de Rodilla
@@ -1117,7 +1117,7 @@ if($_SESSION["id"]!=null){
 
 <div class="modal_mensaje">
 
-    <h2>Enviar Mensake</h2>
+
 
     <form id="c_enviar_mensaje">
 
@@ -1160,6 +1160,8 @@ function test() {
 <script src="../Js/AlertaBien.js"></script>
 <script src="../Js/Ajax.js"></script>
 <script src="../Js/eliminar_recordatorio.js"></script>
+<script src="../Js/enviar_mensaje.js"></script>
+<script src="../Js/Modal_Mensaje.js"></script>
 
 
 

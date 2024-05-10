@@ -2,11 +2,10 @@
 include ('Conexion.php');
 session_start();
     $id_user=$_SESSION["id"];
-    $id=$_POST["id_doc"];
-    $id=$_POST["mensaje_listo"];
-    //$id=1;
+    $id_doc=$_POST["id_doc"];
+    $mensaje=$_POST["mensaje_listo"];
 
-        $insert3="INSERT INTO mensajes (idusuarios,) VALUES ('$id_user','')";
+        $insert3="INSERT INTO mensajes (id_remitente,Mensaje,id_receptor,Estado) VALUES ('$id_user','$mensaje','$id_doc','Sin Leer')";
         $cont=mysqli_query($con,$insert3);
         if ($cont) {
            echo "Si";

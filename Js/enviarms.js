@@ -13,10 +13,13 @@ $(document).ready(function () {
 
                 if (respuesta == "Si") {
                     Good('Si');
+                    Modal_("No");
                 }
                 else {
                     Good('No');
                 }// Actualizar el contenido de la página web con la respuesta del servidor
+
+                
             },
         });
     });

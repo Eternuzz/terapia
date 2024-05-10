@@ -10,7 +10,8 @@ $(document).ready(function() {
        type: 'POST', // Método HTTP que se utilizará para enviar la solicitud
        data: $(this).serialize() + '&form_id=' + form_id, // Datos que se enviarán con la solicitud (en este caso, los datos del formulario y el identificador único)
        success: function(respuesta) {
-           $('#c_enviar_mensaje').html(respuesta); // Actualizar el contenido de la página web con la respuesta del servidor
+           $('#c_enviar_mensaje').html(respuesta);
+           Modal_("Si"); 
        },
    });
 });
