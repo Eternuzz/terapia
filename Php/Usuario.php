@@ -51,7 +51,7 @@ if($_SESSION["id"]!=null){
             <button onclick="cambiar_c('Seguimiento_terapia')">Seguimiento Terapias</button>
             <button onclick="cambiar_c('Comunicacion')">Comunicacion</button>
             <button onclick="cambiar_c('Recordatorio')">Recordatorio</button>
-            <button onclick="cambiar_c('Configuracion')">Configuracion</button>
+            <button onclick="cambiar_c('Configuracion');llamar_mensajes()">Configuracion</button>
         </div>
 
     </nav>
@@ -1077,24 +1077,74 @@ if($_SESSION["id"]!=null){
 
             <!-- Configuracion -->
     
-            <section class="Configuracion cont_general" id="Configuracion">
-                <div class="title_general">
-                    <h1>Mensajes!</h1>
+            <section class="Recordatorio cont_general" id="Configuracion">
+
+            <div class="barra_lateral">
+                    <button onclick="cambiar_c('recibidos');llamar_mensajes()">Recibidos</button>
+                    <button id="b_enviados" onclick="cambiar_c('enviados'),evento_normal('Enviados.php','#nul','b_enviados','bandeja_enviados')" >Enviados</button>
+      
+    
                 </div>
 
-                <div class="contain_mensajes" id="bandeja_mensajes">
-                    <div class="bandeja">
-                        <p>Tipo_Cita</p>
-                        <p>Fecha</p>
-                        <p>Hora</p>
-                        <button>ver</button>
-                        <button>Eliminar</button>
+                <div class="contain_recordatorios">
+                    <div class="contain_r" id="recibidos">
+                        <div class="title_general">
+                            <h1>Mensajes Rebididos</h1>
+                        </div>
+
+                        <form class="consulta" id="buscar_estado_r">
+                            <select name="estado"  class="select_especialidad">
+                            <option value=""></option>
+                            
+                        </select>
+        
+                            <button class="consultar_especialistas" id="estadoR" type="button" onclick="evento_normal('BuscarMensajePorEstado.php','#buscar_estado_r','estadoR','bandeja_recibidos')">Buscar</button>
+                        </form>
+
+                        <div class="bandeja_recordatorios" id="bandeja_recibidos">
+                            <div class="bandeja">
+                                <p>Tipo_Cita</p>
+                                <p>Fecha</p>
+                                <p>Hora</p>
+                                
+                                <button>Eliminar</button>
+                            </div>
+                        </div>
+                        
+
+
+                    </div>
+
+                    <div class="contain_r" id="enviados">
+
+                        <div class="title_general">
+                            <h1>Mensajes Enviados</h1>
+                        </div>
+
+                        <form class="consulta" id="buscar_estado_e">
+                            <select name="estado"  class="select_especialidad">
+                            <option value=""></option>
+                            
+                        </select>
+        
+                            <button class="consultar_especialistas" id="estadoE" type="button" onclick="evento_normal('BuscarRSolo.php','#buscar_recordd','buscarRecord','bandeja_recordatorio')">Buscar</button>
+                        </form>
+
+                        <div class="bandeja_recordatorios" id="bandeja_enviados">
+                            <div class="bandeja">
+                                <p>Tipo_Cita</p>
+                                <p>Fecha</p>
+                                <p>Hora</p>
+                                
+                                <button>Eliminar</button>
+                            </div>
+                        </div>
+                        
                     </div>
 
 
                 </div>
 
-    
             </section>
 
         </div>
@@ -1162,6 +1212,7 @@ function test() {
 <script src="../Js/eliminar_recordatorio.js"></script>
 <script src="../Js/enviar_mensaje.js"></script>
 <script src="../Js/Modal_Mensaje.js"></script>
+<script src="../Js/Mensajes.js"></script>
 
 
 

@@ -11,7 +11,7 @@ session_start();
         while ($fila = $resultado->fetch_assoc()) {
             ?>
                     <h2>Enviar Mensake</h2>
-                        
+
                     <div class="especialista_1">
 
                         <div class="img_especialista">
@@ -30,13 +30,16 @@ session_start();
                         
                         ?></p>
                         
-                        <textarea name="mensaje_listo" id="hola"></textarea>
+                        
 
                         
                     <form class="form_enviar_mensaje_listo" data-form="<?php echo $fila["idusuarios"];?>">
-                        <textarea name="mensaje_listo" id="hola"></textarea>
+                        <textarea name="mensaje_listo" id="hola" placeholder="escribe aqui tu mensaje"></textarea>
                         <input type="hidden" name="id_doc" value="<?php echo $fila["idusuarios"];?>">
+                        
                         <button type="submit" class="but_eliminar">Ennviar Mensaje</button>
+
+                        <button type="button" class="but_eliminar" onclick="Modal_('No')">CANCELAR</button>
                     </form>
                     </div>
                                         
@@ -46,3 +49,4 @@ session_start();
 ?>
 
 <script src="../Js/enviarms.js"></script>
+<script src="../Js/Modal_Mensaje.js"></script>
