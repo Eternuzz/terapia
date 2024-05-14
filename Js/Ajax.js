@@ -100,3 +100,5 @@ function evento_click_(destino,origen,remitente){
     boton_click_(remitente);
 
 }
+
+

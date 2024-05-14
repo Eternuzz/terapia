@@ -10,7 +10,7 @@ session_start();
     if (mysqli_num_rows($resultado) > 0) {
         while ($fila = $resultado->fetch_assoc()) {
             ?>
-                    <h2>Enviar Mensake</h2>
+                    <h2>Enviar Mensaje</h2>
 
                     <div class="especialista_1">
 
@@ -37,9 +37,9 @@ session_start();
                         <textarea name="mensaje_listo" id="hola" placeholder="escribe aqui tu mensaje"></textarea>
                         <input type="hidden" name="id_doc" value="<?php echo $fila["idusuarios"];?>">
                         
-                        <button type="submit" class="but_eliminar">Ennviar Mensaje</button>
+                        <button type="submit" class="but_mensaje">Ennviar Mensaje</button>
 
-                        <button type="button" class="but_eliminar" onclick="Modal_('No')">CANCELAR</button>
+                        <button type="button" class="but_mensaje" onclick="Modal_('No')">CANCELAR</button>
                     </form>
                     </div>
                                         

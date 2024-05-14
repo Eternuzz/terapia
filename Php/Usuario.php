@@ -3,6 +3,9 @@ include('Conexion.php');
 session_start();
 
 if($_SESSION["id"]!=null){
+    if($_SESSION["id_rol"]==1){
+        echo "<script>window.location.href = 'Admin.php'</script>";
+    }
 
 }else{
     echo "<script>window.location.href = '../Vistas/IniciarSesion.html'</script>";
@@ -16,10 +19,12 @@ if($_SESSION["id"]!=null){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/Usuario.css">
+    <link rel="stylesheet" href="../Css/Usuario5.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-statistics@7.0.0/dist/simple-statistics.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Document</title>
 </head>
@@ -33,10 +38,15 @@ if($_SESSION["id"]!=null){
             </div>
             <div class="barra">
             <?php  
-                        
+
                         echo $_SESSION["nombre"];
                         
+                        
                         ?>
+            <form action="CerrarSesion.php" method="post" class="form_cerrar">
+                 <button type="submit">Cerrar Sesion</button>
+            </form>
+           
             </div>
 
         </div>
@@ -51,7 +61,7 @@ if($_SESSION["id"]!=null){
             <button onclick="cambiar_c('Seguimiento_terapia')">Seguimiento Terapias</button>
             <button onclick="cambiar_c('Comunicacion')">Comunicacion</button>
             <button onclick="cambiar_c('Recordatorio')">Recordatorio</button>
-            <button onclick="cambiar_c('Configuracion');llamar_mensajes()">Configuracion</button>
+            <button onclick="cambiar_c('Configuracion');llamar_mensajes()">Mensajes</button>
         </div>
 
     </nav>
@@ -184,9 +194,7 @@ if($_SESSION["id"]!=null){
                             </div>
                         </div>
 
-                        <div class="seguimiento">
-                            <button>Iniciar Seguimiento Terapia</button>
-                        </div>
+                        
     
 
                     </div>
@@ -340,9 +348,7 @@ if($_SESSION["id"]!=null){
                             </div>
                         </div>
 
-                        <div class="seguimiento">
-                            <button>Iniciar Seguimiento Terapia</button>
-                        </div>
+                        
 
                     </div>
 
@@ -891,22 +897,124 @@ if($_SESSION["id"]!=null){
             <!-- seguimiento terapia -->
 
 
-            <section class="Seguimiento_terapia cont_general" id="Seguimiento_terapia">
-                <div class="title_general">
-                    <h1>seguimiento terapia</h1>
+            <section class="Recordatorio cont_general" id="Seguimiento_terapia">
+
+
+                <div class="barra_lateral">
+                    <button onclick="cambiar_c('registrar_seguimiento')">Registrar Seg.</button>
+                    <button id="b_enviados" onclick="cambiar_c('mi_seguimiento')" >Seguimiento</button>
                 </div>
 
-                <div class="mensaje_llamativo">
-                    <p>¡Estamos aquí para cuidarte y ayudarte en tu proceso de recuperación! No dudes en contactarnos para cualquier pregunta o consulta.</p>
-                </div>
+                <div class="contain_recordatorios">
 
-                <button onclick="Good('Si')">bien</button>
+
+                    <div class="contain_r" id="registrar_seguimiento">
+
+                        <div class="title_general">
+                            <h1>seguimiento terapia</h1>
+                        </div>
+
+                        <div class="mensaje_llamativo">
+                            <p>¡Registra el Progreso de tu terapia para que puedas ver como</p>
+                        </div>
+
+                        <div class="bandeja_recordatorios" >
+                            <div class="container">
+                                <h1>Registro de Datos</h1>
+                                <form id="progress_form">
+                                    <label for="selecteps">Tipo De Terapia</label>
+                                    <select name="id_terapia" id="selecteps" class="select_especialidad">
+                            
+                                        <?php  
+                                        
+                                        $sql = "SELECT * FROM terapias ";
+                                        $resultado = mysqli_query($con, $sql);
+                                    
+                                        if (mysqli_num_rows($resultado) > 0) {
+                                            while ($fila = $resultado->fetch_assoc()) {
+                                                ?>
+
+                                                    <option value="<?php echo $fila["idterapias"];?>"><?php   echo  $fila["Nombre_Terapia"];  ?></option>
+
+                                                                            
+                                                <?php
+                                            }
+                                        }
+                                    ?>
+
+                                        
+                                    </select>
+                                    
+
+                                    <label for="strength">Duracion en minutos de la sesion</label>
+                                    <input type="number" id="strength" name="duracion" placeholder="Ingrese la medición de fuerza" required>
+
+                                    <label for="flexibility">Escala de Dolor Despues De la Sesion (1-10)</label>
+                                    <input type="number" id="flexibility" name="dolor" placeholder="Ingrese el nivel de dolor" required>
+
+                                    <label for="mrcScale">Medicion De Fuerza Muscular</label>
+                                    <select id="mrcScale" name="fuerza" class="select_especialidad">
+                                        <option value="0">Ausencia total de contracción muscular</option>
+                                        <option value="1">Contracción muscular perceptible, pero no hay movimiento</option>
+                                        <option value="2">Movimiento activo posible en la gravedad eliminada</option>
+                                        <option value="3">Movimiento activo posible contra la gravedad, pero no contra resistencia añadida</option>
+                                        <option value="4">Movimiento activo posible contra una resistencia moderada</option>
+                                        <option value="5">Movimiento activo posible contra la gravedad y la resistencia máxima normal</option>
+                                    </select>
+
+                                    <button type="button" id="butreg" onclick="evento_click_('RegistrarSeguimiento.php','#progress_form','butreg')">Registrar Progreso</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contain_r" id="mi_seguimiento">
+                    
+                        <div class="title_general">
+                            <h1>Seguimiento</h1>
+                        </div>
+
+                        <form class="consulta" id="ver_seguimiento">
+                            <select name="id_terapia"  class="select_especialidad">
+                            
+                            <?php  
+                            
+                            $sql = "SELECT * FROM terapias ";
+                            $resultado = mysqli_query($con, $sql);
+                        
+                            if (mysqli_num_rows($resultado) > 0) {
+                                while ($fila = $resultado->fetch_assoc()) {
+                                    ?>
+
+                                        <option value="<?php echo $fila["idterapias"];?>"><?php   echo  $fila["Nombre_Terapia"];  ?></option>
+
+                                                                
+                                    <?php
+                                }
+                            }
+                        ?>
+
+                            
+                        </select>
+        
+                            <button class="consultar_especialistas"  type="button" id="btn_verSeg" onclick="evento_normal('VerSeguimiento.php','#ver_seguimiento','btn_verSeg','contain_grafica')">Buscar</button>
+                        </form>
+
+                        <div class="bandeja_recordatorios" id="contain_grafica">
+
+                        </div>
+                    </div>
+
+
+                </div>
 
             </section>
 
             <!-- Comunicacion terapia -->
     
-            <section class="Comunicacion cont_general" id="Comunicacion">
+            <section class="Comunicacion " id="Comunicacion">
                 <div class="title_general">
                     <h1>¡Comunicate!</h1>
                 </div>
@@ -987,7 +1095,7 @@ if($_SESSION["id"]!=null){
 
                             </div>
                             <div class="tipo_terapia">
-                            <select name="id_terapia"  class="select_especialidad">
+                            <select name="id_terapia"  class="select_especialidad_r">
                         
                                     <?php  
                                     
@@ -1018,7 +1126,7 @@ if($_SESSION["id"]!=null){
 
                             </div>
                             <!-- onclick="evento_click_('CrearRecordatorio.php','#crear_re','boton_recordatorio')" -->
-                            <button type="button" id="boton_recordatorio" onclick="evento_click_('CrearRecordatorio.php','#crear_re','boton_recordatorio')">Crear</button>
+                            <button type="button" id="boton_recordatorio" class="btn_crearR" onclick="evento_click_('CrearRecordatorio.php','#crear_re','boton_recordatorio')">Crear</button>
 
                         </form>
 
@@ -1081,7 +1189,7 @@ if($_SESSION["id"]!=null){
 
             <div class="barra_lateral">
                     <button onclick="cambiar_c('recibidos');llamar_mensajes()">Recibidos</button>
-                    <button id="b_enviados" onclick="cambiar_c('enviados'),evento_normal('Enviados.php','#nul','b_enviados','bandeja_enviados')" >Enviados</button>
+                    <button id="b_enviados" onclick="cambiar_c('enviados'),llamar_mensajesE()" >Enviados</button>
       
     
                 </div>
@@ -1094,7 +1202,8 @@ if($_SESSION["id"]!=null){
 
                         <form class="consulta" id="buscar_estado_r">
                             <select name="estado"  class="select_especialidad">
-                            <option value=""></option>
+                            <option value="1">Sin Leer</option>
+                            <option value="2">Leidos</option>
                             
                         </select>
         
@@ -1123,11 +1232,12 @@ if($_SESSION["id"]!=null){
 
                         <form class="consulta" id="buscar_estado_e">
                             <select name="estado"  class="select_especialidad">
-                            <option value=""></option>
+                            <option value="1">Sin Leer</option>
+                            <option value="2">Leidos</option>
                             
                         </select>
         
-                            <button class="consultar_especialistas" id="estadoE" type="button" onclick="evento_normal('BuscarRSolo.php','#buscar_recordd','buscarRecord','bandeja_recordatorio')">Buscar</button>
+                            <button class="consultar_especialistas" id="estadoE" type="button" onclick="evento_normal('BuscarMsPorEstadoE.php','#buscar_estado_e','estadoE','bandeja_enviados')">Buscar</button>
                         </form>
 
                         <div class="bandeja_recordatorios" id="bandeja_enviados">
@@ -1209,10 +1319,10 @@ function test() {
 <script src="../Js/Cambiar_Contenedor.js"></script>
 <script src="../Js/AlertaBien.js"></script>
 <script src="../Js/Ajax.js"></script>
-<script src="../Js/eliminar_recordatorio.js"></script>
+<script src="../Js/EliminarRecordatorio.js"></script>
 <script src="../Js/enviar_mensaje.js"></script>
 <script src="../Js/Modal_Mensaje.js"></script>
-<script src="../Js/Mensajes.js"></script>
+<script src="../Js/Mensajess.js"></script>
 
 
 

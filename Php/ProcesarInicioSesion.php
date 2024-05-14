@@ -11,7 +11,7 @@ session_start();
 
     if (mysqli_num_rows($resultado) > 0) {
         $rol=mysqli_fetch_array($resultado);
-        $nombre=$rol["Nombre"];
+        $nombre=$rol["Nombre"]."".$rol["Apellido"];
         $id_rol=$rol["id_rol"];
         $id=$rol["idusuarios"];
         

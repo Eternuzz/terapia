@@ -5,10 +5,15 @@
 body{
     height: 99vh;
     flex:none;
+    background-image: url(../Img/fondo_def.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 header{
     height: 12%;
-    background-color: rgb(160, 212, 255);
+    background-color:transparent;
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +26,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid;
     flex:none;
 }
 .logo{
@@ -41,6 +45,22 @@ header{
     margin-right: 2%;
     height: 80%;
     text-decoration:none ;
+}
+
+.form_cerrar{
+    width: 30%;
+    height: 60%;
+}
+
+.form_cerrar>button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 
@@ -81,9 +101,13 @@ nav{
     width: 15%;
     height: 60%;
     border: none;
-    border-radius: 20px;
+    border-radius: 6px;
     transition: 2s;
-    background-color: rgb(206, 205, 205);
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    
+    
 }
 
 .contain_nav>button:hover{
@@ -138,9 +162,11 @@ main{
     width: 80%;
     height: 8%;
     border: none;
-    border-radius: 20px;
+    border-radius: 6px;
     transition: 2s;
-    background-color: rgb(206, 205, 205);
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .barra_lateral>button:hover{
@@ -236,7 +262,7 @@ main{
 
 
 
-/*seguimiento terapia*/
+/*seguimiento terapia*/ia
 
 .cont_general{
     display: flex;
@@ -257,9 +283,59 @@ main{
 }
 
 .Seguimiento_terapia{
-    flex-direction: column;
     align-items: center;
     flex:none;
+}
+
+.container {
+    width: 100%;
+    height: 96%;
+    display: flex;
+    padding: 1%;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 15px;
+
+}
+
+:focus {
+    outline: 1px solid #5eb0c5;
+    text-align: center;
+}
+
+#progress_form{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(184, 181, 181, 0.7), 0 4px 8px rgba(0, 0, 0, 0.667);
+
+}
+#progress_form>select,input{
+
+    border: none;
+    width: 60%;
+    height: 10%;
+    border-radius: 6px;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+    
+}
+
+#progress_form>button{
+    border: none;
+    width: 20%;
+    height: 10%;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 
@@ -272,6 +348,10 @@ main{
 
 
 .Comunicacion{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -283,7 +363,7 @@ main{
     display: flex;
     align-items: center;
     justify-content:center ;
-    background-color: #9dcded; /* Fondo amarillo */
+    background-color: #bbcad4; /* Fondo amarillo */
     color: #1f1d1d; /* Color de texto */
     border-radius: 10px; /* Bordes redondeados */
 
@@ -302,24 +382,44 @@ main{
 
     width: 40%;
     height: 80%;
-    border-radius: 5px;
+    border: none;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 
 }
 
-.consultar_especialistas{
+.select_especialidad_r{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
+.consultar_especialistas{
     border: none;
     width: 20%;
     height: 80%;
-    border-radius: 10px;
-    background-color: #a8a7a7;
     cursor: pointer;
+
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .contain_especialistas{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 1%;
     height: 68%;
     width: 90%;
     flex: none;
@@ -333,6 +433,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background: transparent;
     align-items: center;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border-radius: 10px;
@@ -340,14 +441,34 @@ main{
 }
 
 .img_especialista{
-    width: 50%;
-    height: 55%;
+    width: 40%;
+    height: 45%;
     border-radius: 50%;
     border: 1px solid;
     background-image: url(../Img/doctor.png);
     background-size: cover;
     background-position: center;
 
+}
+
+.form_enviar_mensaje{
+    width: 50%;
+    height: 10%;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.but_eliminar{
+    width: 90%;
+    height: 90%;
+    border: none;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 
@@ -396,12 +517,26 @@ main{
 
 }
 
+.btn_crearR{
+    border: none;
+    width: 20%;
+    height: 10%;
+    cursor: pointer;
+
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
 .img_crear{
     width: 30%;
     height: 30%;
     border-radius: 10px;
-    background-image: url();
-    background-size: calc(100%)calc(100%);
+    background-image: url(../Img/16.png);
+    background-size: cover;
+    background-position: center;
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
@@ -461,9 +596,9 @@ main{
 
 .bandeja_recordatorios{
     display: flex;
-    flex-wrap: wrap;
     width: 80%;
     height: 75%;
+    flex-direction: column;
     border-radius: 5px;
     overflow: auto;
 
@@ -478,6 +613,17 @@ main{
     align-items: center;
     justify-content: space-around;
     border-radius: 5px;
+    margin: 1%;
+}
+.eliminarRecordatorio>button{
+
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
 }
 
 
@@ -546,28 +692,94 @@ main{
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    background-color: white;
-    filter: blur(5px);
-
-
+    background-image: url(../Img/fondo_def.jpg);
+    background-size: cover;
+    background-position: center;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+
+
 #c_enviar_mensaje{
-    width: 50%;
+    width: 40%;
     height: 60%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+    z-index: 12;
+    background: transparent;
+    filter: none;
+    backdrop-filter: blur(20px);
 
 }
 
 .especialista_1{
 
     width: 100%;
+    height: 90%;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    align-items: center;
+}
+
+.form_enviar_mensaje_listo{
+    width: 80%;
+    height: 40%;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: transparent;
+    align-items: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 10px;
+    margin-bottom: 2%;
+
+}
+
+.form_enviar_mensaje_listo>textarea{
+
+    width: 80%;
+    height: 40%;
+
+}
+
+.but_mensaje{
+    width: 80%;
+    height: 15%;
+    border: none;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+
+.contain_mensaje{
+    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contain_mensaje>button{
+    width: 20%;
+    height: 10%;
+    border: none;
+    border-radius: 6px;
+    transition: 2s;
+    background:transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
   
@@ -579,3 +791,84 @@ main{
     
 }
   }
+
+
+
+
+
+  /*ADMIN ------------------------------------------------------------------------------------------------*/ 
+
+  
+.for{
+    width: 65%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.titulo{
+    height: 10%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contain_datos{
+
+    display: flex;
+    width: 90%;
+    height: 80%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.colum1{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+input,select{
+    width: 85%;
+    height: 10%;
+    border-radius: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+
+.enviar{
+    width: 20%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.enviar>button{
+    background-color: rgb(122, 190, 219);
+    color: rgb(231, 237, 241);
+    font-size: 17px;
+    transition: 2s;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    height: 60%;
+    cursor: pointer;
+
+}
+
+.enviar>button:hover {
+    transform: scale(1.1);
+    transition: 2s;
+}

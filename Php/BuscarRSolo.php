@@ -18,10 +18,16 @@ session_start();
                                 <p>   <?php   echo   $fila["Hora"]  ?></p>}
                                 <p>   <?php   echo   $fila["Mensaje"]  ?></p>
                                 
-                                <button >Eliminar</button>
+                                <form data-form="<?php echo $fila["idRecordatorio"];?>" class="eliminarRecordatorio">
+                                    <input type="hidden" name="deleteR" value="<?php   echo   $fila["idRecordatorio"]  ?>">
+                                   
+                                    <button type="submit" > Eliminar </button>
+                                </form>
                             </div>
                                         
             <?php
         }
     }
 ?>
+
+<script src="../Js/EliminarRecordatorio.js"></script>

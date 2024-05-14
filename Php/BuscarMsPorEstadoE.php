@@ -1,25 +1,30 @@
 <?php
 include ('Conexion.php');
 session_start();
-$id=$_SESSION["id"];
+    $id=$_SESSION["id"];
+    $estado=$_POST["estado"];
+
+    if($estado=="1"){
+        $estado="Sin Leer";
+    }else{
+        $estado="Leido";
+    }
+
     
-    $sql = "SELECT * FROM usuarios u INNER JOIN mensajes n ON u.idusuarios=n.id_remitente  WHERE u.idusuarios='$id' ";
+    $sql = "SELECT * FROM usuarios u INNER JOIN mensajes n ON u.idusuarios=n.id_remitente WHERE u.idusuarios='$id' AND n.Estado='$estado'";
     $resultado = mysqli_query($con, $sql);
 
     if (mysqli_num_rows($resultado) > 0) {
         while ($fila = $resultado->fetch_assoc()) {
 
-
             $remitente=$fila["id_remitente"];
             $sql1 = "SELECT * FROM usuarios  WHERE idusuarios='$remitente' ";
-            $resultado1 = mysqli_query($con, $sql1);
+            $resultado1 = mysqli_query($con, $sql);
         
             if (mysqli_num_rows($resultado1) > 0) {
-                while ($fila1 = $resultado1->fetch_assoc()) {
-
-         
+                $fila1 = $resultado1->fetch_assoc();
         
-
+ 
 
             ?>
                             <div class="bandeja" >
@@ -43,13 +48,13 @@ $id=$_SESSION["id"];
                                     <button type="submit" > Eliminar </button>
                                 </form>
                                
-                            </div>                 
+                            </div>            
             <?php
-        }
+        
     }
 }
     }
 ?>
 
-<script src="../Js/EliminarMsEnviado.js"></script>
+<script src="../Js/EliminarMensajes.js"></script>
 <script src="../Js/VerMensajes.js"></script>

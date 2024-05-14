@@ -116,3 +116,99 @@
                         ?>
 
                            <?php   echo    ?>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="barra_lateral">
+                    <button onclick="cambiar_c('recibidos')">Recibidos</button>
+                    <button id="b_enviados" onclick="cambiar_c('enviados')" >Enviados</button>
+                </div>
+
+                <div class="contain_recordatorios">
+
+
+                    <div class="contain_r" id="recibidos">
+
+                        <div class="title_general">
+                            <h1>Mensajes Rebididos</h1>
+                        </div>
+
+                    </div>
+
+                    <div class="contain_r" >
+                    
+                        <div class="title_general">
+                            <h1>Mensajes Enviados</h1>
+                        </div>
+
+                        <div class="bandeja_recordatorios" >
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            <section class="Recordatorio cont_general" id="">
+
+                <div class="barra_lateral">
+                    <button onclick="cambiar_c('crear_r')">Crear Recordatorio</button>
+                    <button id="record" onclick="cambiar_c('mis_r')">Mis Recordatorios</button>
+                </div>
+
+                <div class="contain_recordatorios">
+
+                    <div class="contain_r" id="crear_r">
+                        <div class="title_general">
+                            <h1>Crea Tu Recordatorio!</h1>
+                        </div>
+                    </div>
+
+
+                    <div class="contain_r" id="mis_r">
+
+                        <div class="title_general">
+                            <h1>MIs Recordatorios</h1>
+                        </div>
+
+                        <form class="consulta" id="buscar_recordd">
+
+                            <button class="consultar_especialistas" id="buscarRecord" type="button" onclick="evento_normal('BuscarRSolophp''#buscar_recordd''buscarRecord''bandeja_recordatorio'">Buscar</button>
+                        </form>
+
+                        <div class="bandeja_recordatorios" id="">
+
+                            <div class="bandeja">
+                                <p>Tipo_Cita</p>
+                                <p>Fecha</p>
+                                <p>Hora</p>
+                                <button>Eliminar</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
