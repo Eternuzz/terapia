@@ -1004,6 +1004,7 @@ if($_SESSION["id"]!=null){
 
                         <div class="bandeja_recordatorios" id="contain_grafica">
 
+
                         </div>
                     </div>
 
@@ -1165,13 +1166,7 @@ if($_SESSION["id"]!=null){
                         </form>
 
                         <div class="bandeja_recordatorios" id="bandeja_recordatorio">
-                            <div class="bandeja">
-                                <p>Tipo_Cita</p>
-                                <p>Fecha</p>
-                                <p>Hora</p>
-                                
-                                <button>Eliminar</button>
-                            </div>
+
                         </div>
                         
                     </div>

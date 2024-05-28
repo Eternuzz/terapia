@@ -195,12 +195,6 @@ if($_SESSION["id"]!=null){
 
                         <div class="bandeja_recordatorios" id="panel_usuarios">
 
-                            <div class="bandeja">
-                                <p>Tipo_Cita</p>
-                                <p>Fecha</p>
-                                <p>Hora</p>
-                                <button>Eliminar</button>
-                            </div>
 
                         </div>
 
