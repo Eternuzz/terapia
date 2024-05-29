@@ -1314,7 +1314,7 @@ function test() {
 <script src="../Js/Cambiar_Contenedor.js"></script>
 <script src="../Js/AlertaBien.js"></script>
 <script src="../Js/Ajax.js"></script>
-<script src="../Js/EliminarRecordatorio.js"></script>
+<script src="../Js/EliminarRecordatori2.js"></script>
 <script src="../Js/enviar_mensaje.js"></script>
 <script src="../Js/Modal_Mensaje.js"></script>
 <script src="../Js/Mensajess.js"></script>

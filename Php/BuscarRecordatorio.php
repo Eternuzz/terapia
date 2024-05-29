@@ -22,6 +22,13 @@ session_start();
                                     <input type="hidden" name="deleteR" value="<?php   echo   $fila["idRecordatorio"]  ?>">
                                    
                                     <button type="submit" > Eliminar </button>
+                                    
+                                </form>
+                                <form data-form="<?php echo $fila["idRecordatorio"];?>" class="editarRecordatorio">
+                                    <input type="hidden" name="EditarR" value="<?php   echo   $fila["idRecordatorio"]  ?>">
+                                   
+                                    <button type="submit" > Editar </button>
+                                    
                                 </form>
                             </div>
 
@@ -32,5 +39,5 @@ session_start();
     }
 ?>
 
-<script src="../Js/EliminarRecordatorio.js"></script>
+<script src="../Js/EliminarRecordatori2.js"></script>
 
