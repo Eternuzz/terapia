@@ -13,26 +13,19 @@ if(isset($_POST["id"])){
 
             $dates=mysqli_fetch_array($resultado);
             $pass=$dates["Pass"];
+            $Correo=$dates["Correo"];
 
-            $to = "eternuz123@gmail.com";
-            $subject = "Prueba de correo electrónico desde PHP";
-            $message = "Su Contraseña es:aaa";
-            $headers="From : riseofrochy@gmail.com";
-    
-            // Cabeceras del correo electrónico
-            // $headers = "From: riseofrochy@gmail.com\r\n";
-            // $headers .= "Reply-To: remitente@example.com\r\n";
-            // $headers .= "X-Mailer: PHP/" . phpversion();
-    
-            // Envío del correo electrónico
-            if (mail($to, $subject, $message, $headers)) {
-                echo mail.error_log();
-            } else {
-                echo "No";
+            $to="".$Correo;
+            $subject="Prueba correo";
+            $message="Su Contraseña es : ". $pass;
+            $headers='From: Prueba@gmail.com'."\r\n".'Reply-To: prueba@gmail.com';
+
+            if(mail($to,$subject,$message,$headers)){
+                echo"Si";
+            }else{
+                echo"No";
             }
-            
-        
-        
+
     }
 
     
