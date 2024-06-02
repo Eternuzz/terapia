@@ -34,7 +34,7 @@ $(document).ready(function() {
        success: function(respuesta) {
            $('#c_enviar_mensaje').html(respuesta);// aqui especifica el contenedor donde se van a mostrar los datos. solo se cambio el '#c_enviar_mensaje' por el id del contenedor
            //donde se mostraran los datos
-           
+           Modal_("Si"); 
        },
    });
 });

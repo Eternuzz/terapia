@@ -39,5 +39,5 @@ session_start();
     }
 ?>
 
-<script src="../Js/EliminarRecordatori2.js"></script>
+<script src="../Js/EliminarRecordatorio9.js"></script>
 
